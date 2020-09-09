@@ -1,10 +1,11 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import os
 import posenet.converter.config
 
 MODEL_DIR = './_models'
 DEBUG_OUTPUT = False
 
+tf.disable_v2_behavior()
 
 def model_id_to_ord(model_id):
     if 0 <= model_id < 4:

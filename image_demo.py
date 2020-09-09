@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import cv2
 import time
 import argparse
@@ -6,6 +6,7 @@ import os
 
 import posenet
 
+tf.disable_v2_behavior()
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', type=int, default=101)

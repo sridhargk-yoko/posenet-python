@@ -1,6 +1,6 @@
 import json
 import struct
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from tensorflow.python.tools.freeze_graph import freeze_graph
 import cv2
 import numpy as np
@@ -8,6 +8,8 @@ import os
 import tempfile
 
 from posenet.converter.config import load_config
+
+tf.disable_v2_behavior()
 
 BASE_DIR = os.path.join(tempfile.gettempdir(), '_posenet_weights')
 
